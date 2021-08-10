@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Most projects will be page centered, hence the flex and flex direction */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  /* Don't want to show scrollbars by default */
+  /* Remember, to use justify on a column, height must be specified */
+  /* 100vh -> take up 100% of the viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  /* justify-items: space-evenly; */
+}
+
+.panel {
+  background-color: rgb(204, 196, 196);
+  background-size: cover;
+  border-radius: 90px;
+  margin: 10px;
+  width: 90vw;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.4s ease-in;
+}
+.panel h2 {
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+.panel p {
+  opacity: 0;
+  font-size: 0;
+}
+.panel.active {
+  flex: 10;
+}
+
+.panel.active h2 {
+  text-decoration: underline;
+  transition: text-decoration 0.3s ease-in 0.4s;
+  padding: 10px;
+}
+
+.panel.active p {
+  opacity: 1;
+  position: relative;
+  /* left: 25px; */
+  /* right: 25px; */
+  font-size: 20px;
+  padding: 15px;
+  transition: opacity 0.3s ease-in 0.4s;
+}
