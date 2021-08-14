@@ -1,5 +1,3 @@
-//TODO -why doesn't this work?
-
 const progress = document.getElementById("progress");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
@@ -34,6 +32,8 @@ function update() {
 
   const actives = document.querySelectorAll(".active");
   console.log(actives.length);
+  const pText = document.getElementById("stepText");
+  pText.textContent = `Step ${currentActive}`;
 
   progress.style.width =
     ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
