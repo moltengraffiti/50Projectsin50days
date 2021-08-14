@@ -1,3 +1,5 @@
+//TODO -why doesn't this work?
+
 const progress = document.getElementById("progress");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
@@ -26,7 +28,7 @@ function update() {
     if (idx < currentActive) {
       circle.classList.add("active");
     } else {
-      circle.classList.remove("active;");
+      circle.classList.remove("active");
     }
   });
 
