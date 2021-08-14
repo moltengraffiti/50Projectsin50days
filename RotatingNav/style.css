@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Most projects will be page centered, hence the flex and flex direction */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* overflow: hidden; */
+  /* Don't want to show scrollbars by default */
+  /* Remember, to use justify on a column, height must be specified */
+  /* 100vh -> take up 100% of the viewport height */
+}
